@@ -12,8 +12,18 @@ export default function LoginForm() {
         <p>ERD App</p>
       </span>
       <form className="grid grid-cols-1 gap-5">
-        <InputFieldItem title="Email" item="email" type="email" />
-        <InputFieldItem title="Password" item="password" type="password" />
+        <InputFieldItem
+          title="Email"
+          item="email"
+          type="email"
+          placeholder="Your Email"
+        />
+        <InputFieldItem
+          title="Password"
+          item="password"
+          type="password"
+          placeholder="Your Password"
+        />
         <button
           type="submit"
           className="mx-auto mt-5 w-28 rounded-lg bg-[--second] p-3 font-medium text-white duration-100 ease-in-out hover:bg-[--third] hover:text-white"
@@ -21,6 +31,12 @@ export default function LoginForm() {
           Login
         </button>
       </form>
+      <p className="mt-10 text-center text-sm">
+        Dont have account yet ?{" "}
+        <a href="/login#" className="text-[--second] hover:text-[--primary]">
+          Register here
+        </a>
+      </p>
     </div>
   );
 }
